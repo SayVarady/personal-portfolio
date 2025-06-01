@@ -1,0 +1,5 @@
+@import url('https://api.fontshare.com/v2/css?f[]=pally@400,500,700&display=swap');
+@import "tailwindcss";
+* {
+    font-family: 'Pally', sans-serif;
+}
