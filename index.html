@@ -1,13 +1,391 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a developer with a passion for building beautiful digital experiences." />
+  <title>Say Varady — Developer Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-trail" class="cursor-trail"></div>
+
+  <!-- Floating sakura canvas -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="navbar__logo">
+      <span class="logo-kanji">夢</span>
+      <span class="logo-text">Say<span class="logo-accent">Varady</span></span>
+    </a>
+    <button id="menu-toggle" class="navbar__hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links" class="navbar__links">
+      <li><a href="#hero"     class="nav-link" data-section="hero">Home</a></li>
+      <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ───────── HERO ───────── -->
+  <section id="hero" class="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__content">
+      <div class="hero__text">
+        <p class="hero__greeting"><span class="kanji-accent">こんにちは</span> — Hello, World!</p>
+        <h1 class="hero__name">Say <span class="gradient-text">Varady</span></h1>
+        <p class="hero__role">
+          I'm a <span id="typed-text" class="typed-accent">Full-Stack Developer</span><span class="cursor-blink">|</span>
+        </p>
+        <p class="hero__bio">
+          Crafting beautiful, performant web experiences — one line of code at a time.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact"  class="btn btn--outline">Get In Touch</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/sayvarady" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/sayvarady" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero__image-wrap">
+        <div class="hero__image-ring"></div>
+        <div class="hero__image-ring hero__image-ring--2"></div>
+        <img src="assets/hero.png" alt="Anime developer hero illustration" class="hero__image" />
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── ABOUT ───────── -->
+  <section id="about" class="section about">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__kanji">私について</span>
+        <h2 class="section__title">About Me</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__card glass-card">
+          <div class="about__avatar-wrap">
+            <div class="about__avatar-ring"></div>
+            <div class="about__avatar">
+              <i class="fas fa-code"></i>
+            </div>
+          </div>
+          <h3>Who Am I?</h3>
+          <p>
+            I'm <strong>Say Varady</strong>, a passionate developer based in   Cambodia with a love for clean code and elegant interfaces. I thrive at the intersection of design and technology.
+          </p>
+        </div>
+        <div class="about__card glass-card">
+          <div class="about__avatar-wrap">
+            <div class="about__avatar-ring"></div>
+            <div class="about__avatar">
+              <i class="fas fa-palette"></i>
+            </div>
+          </div>
+          <h3>What I Do</h3>
+          <p>
+            I build full-stack web applications, design immersive user interfaces, and craft digital experiences that leave a lasting impression.
+          </p>
+        </div>
+        <div class="about__card glass-card">
+          <div class="about__avatar-wrap">
+            <div class="about__avatar-ring"></div>
+            <div class="about__avatar">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <h3>My Passion</h3>
+          <p>
+            Beyond code, I'm inspired by Japanese art, anime culture, and the beauty of minimalist design. I aim to bring that same artistry into every project.
+          </p>
+        </div>
+      </div>
+      <div class="about__facts">
+        <div class="fact-item">
+          <span class="fact-number">2+</span>
+          <span class="fact-label">Years Experience</span>
+        </div>
+        <div class="fact-divider"></div>
+        <div class="fact-item">
+          <span class="fact-number">10+</span>
+          <span class="fact-label">Projects Built</span>
+        </div>
+        <div class="fact-divider"></div>
+        <div class="fact-item">
+          <span class="fact-number">∞</span>
+          <span class="fact-label">Lines of Code</span>
+        </div>
+        <div class="fact-divider"></div>
+        <div class="fact-item">
+          <span class="fact-number">☕</span>
+          <span class="fact-label">Cups of Coffee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SKILLS ───────── -->
+  <section id="skills" class="section skills">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__kanji">スキル</span>
+        <h2 class="section__title">Skills & Tech</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="skills__grid">
+
+        <!-- Tech Icons -->
+        <div class="skills__icons glass-card">
+          <h3 class="skills__subtitle">Technologies</h3>
+          <div class="tech-icons">
+            <div class="tech-icon" data-label="HTML5">
+              <i class="fab fa-html5" style="color:#e34c26"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-icon" data-label="CSS3">
+              <i class="fab fa-css3-alt" style="color:#264de4"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-icon" data-label="JavaScript">
+              <i class="fab fa-js-square" style="color:#f7df1e"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-icon" data-label="React">
+              <i class="fab fa-react" style="color:#61dafb"></i>
+              <span>React</span>
+            </div>
+            <div class="tech-icon" data-label="Node.js">
+              <i class="fab fa-node-js" style="color:#68a063"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-icon" data-label="Laravel">
+              <i class="fab fa-laravel" style="color:#ff2d20"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="tech-icon" data-label="Python">
+              <i class="fab fa-python" style="color:#3776ab"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-icon" data-label="Git">
+              <i class="fab fa-git-alt" style="color:#f05032"></i>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="skills__bars glass-card">
+          <h3 class="skills__subtitle">Proficiency</h3>
+          <div class="skill-bar-group">
+            <div class="skill-bar" data-skill="Frontend Development" data-percent="90">
+              <div class="skill-bar__label">
+                <span>Frontend Development</span><span class="skill-bar__pct">90%</span>
+              </div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-skill="Backend Development" data-percent="80">
+              <div class="skill-bar__label">
+                <span>Backend Development</span><span class="skill-bar__pct">80%</span>
+              </div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-skill="UI/UX Design" data-percent="75">
+              <div class="skill-bar__label">
+                <span>UI/UX Design</span><span class="skill-bar__pct">75%</span>
+              </div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-skill="Database Management" data-percent="70">
+              <div class="skill-bar__label">
+                <span>Database Management</span><span class="skill-bar__pct">70%</span>
+              </div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-skill="DevOps & Deployment" data-percent="60">
+              <div class="skill-bar__label">
+                <span>DevOps & Deployment</span><span class="skill-bar__pct">60%</span>
+              </div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── PROJECTS ───────── -->
+  <section id="projects" class="section projects">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__kanji">プロジェクト</span>
+        <h2 class="section__title">Projects</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card glass-card">
+          <div class="project-card__badge">Featured</div>
+          <div class="project-card__icon"><i class="fas fa-link"></i></div>
+          <h3 class="project-card__title">URL Shortener</h3>
+          <p class="project-card__desc">A full-stack URL shortening application built with Laravel, Vue.js, and MySQL. Features custom aliases, analytics, and QR code generation.</p>
+          <div class="project-card__tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank" rel="noopener" class="project-link project-link--live"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card">
+          <div class="project-card__icon"><i class="fas fa-globe"></i></div>
+          <h3 class="project-card__title">Portfolio Website</h3>
+          <p class="project-card__desc">This very site — a Japanese anime-styled personal portfolio built with pure HTML, CSS, and Vanilla JavaScript. Hosted on GitHub Pages.</p>
+          <div class="project-card__tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/sayvarady/personal-portfolio" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" target="_blank" rel="noopener" class="project-link project-link--live"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card">
+          <div class="project-card__icon"><i class="fas fa-robot"></i></div>
+          <h3 class="project-card__title">Coming Soon</h3>
+          <p class="project-card__desc">My next project is in the works — something exciting with AI and modern web tech. Stay tuned for the reveal!</p>
+          <div class="project-card__tags">
+            <span class="tag">AI</span>
+            <span class="tag">Web</span>
+            <span class="tag">TBD</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#contact" class="project-link"><i class="fas fa-bell"></i> Notify Me</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACT ───────── -->
+  <section id="contact" class="section contact">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__kanji">お問い合わせ</span>
+        <h2 class="section__title">Get In Touch</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">Have a project in mind? Let's build something great together.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info glass-card">
+          <h3>Let's Connect</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-item__label">Email</span>
+                <a href="mailto:your@email.com" class="contact-item__value">your@email.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-item__label">GitHub</span>
+                <a href="https://github.com/sayvarady" target="_blank" rel="noopener" class="contact-item__value">github.com/sayvarady</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="contact-item__label">LinkedIn</span>
+                <a href="https://linkedin.com/in/sayvarady" target="_blank" rel="noopener" class="contact-item__value">linkedin.com/in/sayvarady</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-item__label">Location</span>
+                <span class="contact-item__value">Phnom Penh, Cambodia 🇰🇭</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form id="contact-form" class="contact__form glass-card" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Sakura Yamamoto" required />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="sakura@example.com" required />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's work together!" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div id="form-success" class="form-success hidden">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="logo-kanji">夢</span>
+        <span>Say<span class="logo-accent">Varady</span></span>
+      </div>
+      <p class="footer__quote">「夢を持ち続けろ」— Keep chasing your dreams</p>
+      <p class="footer__copy">&copy; 2026 Say Varady. Crafted with <span class="heart">♥</span> and lots of coffee.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
