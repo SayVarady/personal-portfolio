@@ -45,7 +45,8 @@
       <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
       <li><a href="#ascii-art" class="nav-link" data-section="ascii-art">Art</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      <li><a href="#writing"  class="nav-link" data-section="writing">Writing</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -107,10 +108,9 @@
           </div>
           <h3>Who Am I?</h3>
           <p>
-            I'm <strong>Say Varady</strong>, a passionate developer based in Cambodia with a love for clean code and
-            elegant interfaces. I thrive at the intersection of design and technology.
-            I tend to lean on the backend side of the development. I enjoy exploring how things work under the hood and
-            why does a certain technology work the way it does.
+            I'm <strong>Say Varady</strong>, a developer based in Phnom Penh, Cambodia. I spent the last <span id="experience">3 years</span> as a Software Engineer at an HR SaaS startup — sitting in <strong>product meetings</strong>, <strong>technical calls</strong>, and <strong>leading a team</strong> through complex implementation problems. Somewhere in that process I realized what I actually love is being hands-on: <strong>writing the code</strong>, <strong>designing the system</strong>, <strong>solving the problem</strong> myself — not just delegating it.
+            
+            So I'm doing something about it. I'm moving deeper into <strong>backend and full-stack engineering</strong>, <strong>sharpening the technical edge</strong> that management pulled me away from, and building toward working with development teams beyond Cambodia.
           </p>
         </div>
         <div class="about__card glass-card">
@@ -122,8 +122,7 @@
           </div>
           <h3>What I Do</h3>
           <p>
-            I build full-stack web applications, design a scalable application. I put my pride on what I build and craft
-            digital experiences that leave a lasting impression.
+          	I build full-stack web applications with <strong>Laravel</strong> and <strong>Vue</strong>, with 3 years of production experience shipping real features for an HR SaaS product used by real companies. I care about how systems are structured underneath — not just that they work, but why they're built the way they are.
           </p>
         </div>
         <div class="about__card glass-card">
@@ -133,22 +132,21 @@
               <i class="fas fa-heart"></i>
             </div>
           </div>
-          <h3>My Passion</h3>
+          <h3>What I'm Working Toward</h3>
           <p>
-            Beyond code, I'm a reader of classic Literature, and working out. On the technical side, I love digging
-            deeper into the world of technolody and learning new things.
+          I'm building this site as a record of that shift: the projects I'm building, the technical decisions I make and why, and the lessons from moving between management and engineering. If you're a developer or team working on interesting problems — especially across borders — I'd love to connect.
           </p>
         </div>
       </div>
       <div class="about__facts">
         <div class="fact-item">
-          <span class="fact-number">2+</span>
-          <span class="fact-label">Years Experience</span>
+          <span class="fact-number" id="experience-year">2+</span>
+          <span class="fact-label" id="experience-text">Years Experience</span>
         </div>
         <div class="fact-divider"></div>
         <div class="fact-item">
-          <span class="fact-number">10+</span>
-          <span class="fact-label">Projects Built (1 professional project)</span>
+          <span class="fact-number">1</span>
+          <span class="fact-label">Production SaaS Product</span>
         </div>
         <div class="fact-divider"></div>
         <div class="fact-item">
@@ -165,108 +163,122 @@
   </section>
 
   <!-- ───────── SKILLS ───────── -->
-  <section id="skills" class="section skills">
-    <div class="section__inner">
-      <div class="section__header">
-        <span class="section__kanji">スキル</span>
-        <h2 class="section__title">Skills & Tech</h2>
-        <div class="section__divider"></div>
-      </div>
-      <div class="skills__grid">
-
-        <!-- Tech Icons -->
-        <div class="skills__icons glass-card">
-          <h3 class="skills__subtitle">Technologies</h3>
-          <div class="tech-icons">
-            <div class="tech-icon" data-label="HTML5">
-              <i class="fab fa-html5" style="color:#e34c26"></i>
-              <span>HTML5</span>
-            </div>
-            <div class="tech-icon" data-label="CSS3">
-              <i class="fab fa-css3-alt" style="color:#264de4"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="tech-icon" data-label="JavaScript">
-              <i class="fab fa-js-square" style="color:#f7df1e"></i>
-              <span>JavaScript</span>
-            </div>
-            <div class="tech-icon" data-label="Vuejs">
-              <i class="fab fa-vuejs" style="color: #63e6be;"></i>
-              <span>Vue</span>
-            </div>
-            <div class="tech-icon" data-label="Node.js">
-              <i class="fab fa-node-js" style="color:#68a063"></i>
-              <span>Node.js</span>
-            </div>
-            <div class="tech-icon" data-label="PHP">
-              <i class="fab fa-php" style="color:#5176ef"></i>
-              <span>PHP</span>
-            </div>
-            <div class="tech-icon" data-label="Laravel">
-              <i class="fab fa-laravel" style="color:#ff2d20"></i>
-              <span>Laravel</span>
-            </div>
-            <div class="tech-icon" data-label="Python">
-              <i class="fab fa-python" style="color:#3776ab"></i>
-              <span>Python</span>
-            </div>
-            <div class="tech-icon" data-label="Git">
-              <i class="fab fa-git-alt" style="color:#f05032"></i>
-              <span>Git</span>
-            </div>
-          </div>
+    <section id="skills" class="section skills">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__kanji">スキル</span>
+          <h2 class="section__title">Skills & Tech</h2>
+          <div class="section__divider"></div>
         </div>
-
-        <!-- Skill Bars -->
-        <div class="skills__bars glass-card">
-          <h3 class="skills__subtitle">Proficiency</h3>
-          <div class="skill-bar-group">
-            <div class="skill-bar" data-skill="Frontend Development" data-percent="90">
-              <div class="skill-bar__label">
-                <span>Frontend Development</span><span class="skill-bar__pct">90%</span>
+        <div class="skills__grid">
+          <!-- Tech Icons -->
+          <div class="skills__icons glass-card">
+            <h3 class="skills__subtitle">Technologies</h3>
+            <div class="tech-icons">
+              <div class="tech-icon" data-label="HTML5">
+                <i class="fab fa-html5" style="color:#e34c26"></i>
+                <span>HTML5</span>
               </div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill"></div>
+              <div class="tech-icon" data-label="CSS3">
+                <i class="fab fa-css3-alt" style="color:#264de4"></i>
+                <span>CSS3</span>
               </div>
-            </div>
-            <div class="skill-bar" data-skill="Backend Development" data-percent="80">
-              <div class="skill-bar__label">
-                <span>Backend Development</span><span class="skill-bar__pct">80%</span>
+              <div class="tech-icon" data-label="JavaScript">
+                <i class="fab fa-js-square" style="color:#f7df1e"></i>
+                <span>JavaScript</span>
               </div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill"></div>
+              <div class="tech-icon" data-label="Vuejs">
+                <i class="fab fa-vuejs" style="color: #63e6be;"></i>
+                <span>Vue</span>
               </div>
-            </div>
-            <div class="skill-bar" data-skill="API" data-percent="75">
-              <div class="skill-bar__label">
-                <span>Rest API</span><span class="skill-bar__pct">75%</span>
+              <div class="tech-icon" data-label="MySQL">
+                <i class="fas fa-database" style="color:#4479a1"></i>
+                <span>MySQL</span>
               </div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill"></div>
+              <div class="tech-icon" data-label="PHP">
+                <i class="fab fa-php" style="color:#5176ef"></i>
+                <span>PHP</span>
               </div>
-            </div>
-            <div class="skill-bar" data-skill="Database Management" data-percent="70">
-              <div class="skill-bar__label">
-                <span>Database Management</span><span class="skill-bar__pct">70% (Learning)</span>
+              <div class="tech-icon" data-label="Laravel">
+                <i class="fab fa-laravel" style="color:#ff2d20"></i>
+                <span>Laravel</span>
               </div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill"></div>
+              <div class="tech-icon" data-label="Docker">
+                <i class="fab fa-docker" style="color:#2496ed"></i>
+                <span>Docker</span>
               </div>
-            </div>
-            <div class="skill-bar" data-skill="DevOps & Deployment" data-percent="60">
-              <div class="skill-bar__label">
-                <span>DevOps & Deployment</span><span class="skill-bar__pct">40% (Learning)</span>
-              </div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill"></div>
+              <div class="tech-icon" data-label="Git">
+                <i class="fab fa-git-alt" style="color:#f05032"></i>
+                <span>Git</span>
               </div>
             </div>
           </div>
+          <!-- Skill Groups -->
+          <div class="skills__bars glass-card">
+            <h3 class="skills__subtitle">Experience Breakdown</h3>
+            <div class="skill-group-list">
+  
+              <div class="skill-group">
+                <div class="skill-group__label">
+                  <i class="fas fa-check-circle skill-group__icon skill-group__icon--core"></i>
+                  <span>Core Stack — Production Experience</span>
+                </div>
+                <p class="skill-group__desc">
+                  3 years building and maintaining a production HR SaaS platform.
+                </p>
+                <div class="skill-group__tags">
+                  <span class="tag">Laravel</span>
+                  <span class="tag">Vue.js (Option API & Composition API)</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span> <br>
+                  <span class="tag">REST API Design</span>
+                </div>
+              </div>
+  
+              <div class="skill-group">
+                <div class="skill-group__label">
+                  <i class="fas fa-laptop-code skill-group__icon skill-group__icon--comfortable"></i>
+                  <span>Also Comfortable With</span>
+                </div>
+                <div class="skill-group__tags">
+                  <span class="tag">JavaScript (ES6+)</span>
+                  <span class="tag">HTML5 / CSS3</span>
+                  <span class="tag">Git &amp; GitHub Workflows</span>
+                </div>
+              </div>
+  
+              <div class="skill-group">
+                <div class="skill-group__label">
+                  <i class="fas fa-arrow-trend-up skill-group__icon skill-group__icon--growing"></i>
+                  <span>Currently Deepening</span>
+                </div>
+                <p class="skill-group__desc">
+                  Actively building toward stronger backend architecture and deployment skills.
+                </p>
+                <div class="skill-group__tags">
+                  <span class="tag">Docker</span>
+                  <span class="tag">CI/CD (GitHub Actions)</span>
+                  <span class="tag">Automated Testing (Pest)</span> <br>
+                  <span class="tag">System Architecture & Design</span>
+                </div>
+              </div>
+  
+              <div class="skill-group">
+                <div class="skill-group__label">
+                  <i class="fas fa-compass skill-group__icon skill-group__icon--exploring"></i>
+                  <span>Exploring</span>
+                </div>
+                <div class="skill-group__tags">
+                  <span class="tag tag--muted">Node.js</span>
+                  <span class="tag tag--muted">Python</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- ───────── ASCII ART ───────── -->
   <section id="ascii-art" class="section ascii-section">
@@ -376,6 +388,69 @@
     </div>
   </section>
 
+  <!-- ───────── WRITING ───────── -->
+  <section id="writing" class="section writing">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="section__kanji">日誌</span>
+        <h2 class="section__title">Writing</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">Notes from the process — the ideas, the mistakes, the decisions I'd make again, and the ones I wouldn't.</p>
+      </div>
+      <div class="writing__grid">
+
+        <article class="writing-card glass-card">
+          <span class="writing-card__chapter">一</span>
+          <div class="writing-card__meta">
+            <span>Aug 2026</span>
+            <span class="dot">•</span>
+            <span>4 min read</span>
+          </div>
+          <h3 class="writing-card__title">Why I Started Writing This Down</h3>
+          <p class="writing-card__desc">The portfolio was supposed to just list projects. Then I realized the more interesting record was everything that happened before a project was "done" — so I built a place to keep it.</p>
+          <div class="writing-card__tags">
+            <span class="tag tag--idea">Idea</span>
+            <span class="tag tag--decision">Decision</span>
+          </div>
+          <a href="writing/why-i-started-writing-this-down.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="writing-card glass-card">
+          <span class="writing-card__chapter">二</span>
+          <div class="writing-card__meta">
+            <span>Jun 2026</span>
+            <span class="dot">•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="writing-card__title">Leaving the Meeting Room, Reclaiming the Editor</h3>
+          <p class="writing-card__desc">Three years into managing people and product calls, I noticed I was happiest the one hour a week I still got to write code. Here's the mistake I almost made ignoring that.</p>
+          <div class="writing-card__tags">
+            <span class="tag tag--mistake">Mistake</span>
+            <span class="tag tag--decision">Decision</span>
+          </div>
+          <a href="writing/leaving-the-meeting-room.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="writing-card glass-card">
+          <span class="writing-card__chapter">三</span>
+          <div class="writing-card__meta">
+            <span>Apr 2026</span>
+            <span class="dot">•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="writing-card__title">Vanilla JS Over a Framework: A Trade-off I Keep Revisiting</h3>
+          <p class="writing-card__desc">I build production apps in Vue every day. So why is this site plain HTML, CSS, and vanilla JavaScript? A look at the trade-off, and whether I'd still make the same call.</p>
+          <div class="writing-card__tags">
+            <span class="tag tag--decision">Decision</span>
+            <span class="tag tag--tradeoff">Trade-off</span>
+          </div>
+          <a href="writing/vanilla-js-trade-off.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ───────── CONTACT ───────── -->
   <section id="contact" class="section contact">
     <div class="section__inner">
@@ -392,8 +467,8 @@
             <div class="contact-item">
               <div class="contact-item__icon"><i class="fas fa-envelope"></i></div>
               <div>
-                <span class="contact-item__label">Email</span>
-                <a href="mailto:your@email.com" class="contact-item__value">your@email.com</a>
+                <span class="contact-item__label">Gmail</span>
+                <a href="mailto:varady.work@gmail.com" class="contact-item__value">varady.work@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">

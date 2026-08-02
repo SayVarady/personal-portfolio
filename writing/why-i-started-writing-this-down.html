@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Why I added a Writing section to this portfolio — the idea behind documenting process, not just projects." />
+  <title>Why I Started Writing This Down — Say Varady</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-trail" class="cursor-trail"></div>
+
+  <!-- Floating sakura canvas -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <nav id="navbar" class="navbar">
+    <a href="../index.html#hero" class="navbar__logo">
+      <span class="logo-kanji">夢</span>
+      <span class="logo-text">Say<span class="logo-accent">Varady</span></span>
+    </a>
+    <button id="menu-toggle" class="navbar__hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links" class="navbar__links">
+      <li><a href="../index.html#hero"     class="nav-link">Home</a></li>
+      <li><a href="../index.html#about"    class="nav-link">About</a></li>
+      <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+      <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+      <li><a href="../index.html#writing"  class="nav-link active">Writing</a></li>
+      <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ───────── POST ───────── -->
+  <article class="section post">
+    <div class="section__inner post__inner">
+      <a href="../index.html#writing" class="post__back"><i class="fas fa-arrow-left"></i> Back to Writing</a>
+
+      <header class="post__header">
+        <span class="post__chapter">一</span>
+        <div class="post__meta">
+          <span>Aug 2026</span>
+          <span class="dot">•</span>
+          <span>4 min read</span>
+        </div>
+        <h1 class="post__title">Why I Started Writing This Down</h1>
+        <div class="post__tags">
+          <span class="tag tag--idea">Idea</span>
+          <span class="tag tag--decision">Decision</span>
+        </div>
+      </header>
+
+      <div class="post__body glass-card">
+        <p>
+          For a long time this site was just a list: here are my skills, here are my projects, here's how to reach me. True, but thin. It read like a resume with better lighting. It didn't say anything about how any of it actually happened.
+        </p>
+
+        <div class="post__section">
+          <h2 class="post__section-title"><i class="fas fa-lightbulb"></i> The Idea</h2>
+          <p>
+            The projects I'm proudest of were never straight lines. There was always a version one that got scrapped, a library I picked and later regretted, a night where I almost shipped the wrong architecture because it was the path of least resistance. None of that shows up in a project card with three tags and a "Live" link.
+          </p>
+          <p>
+            I wanted a place on this site for that part — the reasoning, not just the result. Somewhere to write down what I was actually thinking when I chose Laravel over something else, or why a "simple" feature took a week longer than planned. Not a polished engineering blog with best practices baked in — closer to a running log of a developer figuring things out in real time.
+          </p>
+        </div>
+
+        <div class="post__section">
+          <h2 class="post__section-title"><i class="fas fa-signs-post"></i> The Decision</h2>
+          <p>
+            I almost made this a generic "Blog" section — tutorials, how-tos, the usual. I killed that idea fast. I don't need another place competing with a thousand other tutorials on the same topics. What I do have that's actually mine is the specific, messy path from "product manager who missed writing code" to "engineer again," and every small decision along the way.
+          </p>
+          <p>
+            So <strong>Writing</strong> stayed narrow on purpose: every entry names an idea, a mistake, a decision, or a trade-off — sometimes more than one. If it doesn't fit one of those, it probably belongs somewhere else on the site, not here.
+          </p>
+        </div>
+
+        <p>
+          This entry is entry number one for exactly that reason. Everything else in this section should be able to point back to it and say: that's what this place is for.
+        </p>
+      </div>
+
+      <footer class="post__footer">
+        <a href="../index.html#writing" class="post__nav-link">All Entries</a>
+        <a href="leaving-the-meeting-room.html" class="post__nav-link post__nav-link--next">Next: Leaving the Meeting Room <i class="fas fa-arrow-right"></i></a>
+      </footer>
+    </div>
+  </article>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="logo-kanji">夢</span>
+        <span>Say<span class="logo-accent">Varady</span></span>
+      </div>
+      <p class="footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract not to chase</p>
+      <p class="footer__copy">&copy; 2026 Say Varady. Crafted with <span class="heart">♥</span> and lots of coffee.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

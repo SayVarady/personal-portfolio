@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="On stepping back from management to get closer to the code again — the mistake I nearly made ignoring it." />
+  <title>Leaving the Meeting Room, Reclaiming the Editor — Say Varady</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-trail" class="cursor-trail"></div>
+
+  <!-- Floating sakura canvas -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <nav id="navbar" class="navbar">
+    <a href="../index.html#hero" class="navbar__logo">
+      <span class="logo-kanji">夢</span>
+      <span class="logo-text">Say<span class="logo-accent">Varady</span></span>
+    </a>
+    <button id="menu-toggle" class="navbar__hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links" class="navbar__links">
+      <li><a href="../index.html#hero"     class="nav-link">Home</a></li>
+      <li><a href="../index.html#about"    class="nav-link">About</a></li>
+      <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+      <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+      <li><a href="../index.html#writing"  class="nav-link active">Writing</a></li>
+      <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ───────── POST ───────── -->
+  <article class="section post">
+    <div class="section__inner post__inner">
+      <a href="../index.html#writing" class="post__back"><i class="fas fa-arrow-left"></i> Back to Writing</a>
+
+      <header class="post__header">
+        <span class="post__chapter">二</span>
+        <div class="post__meta">
+          <span>Jun 2026</span>
+          <span class="dot">•</span>
+          <span>6 min read</span>
+        </div>
+        <h1 class="post__title">Leaving the Meeting Room, Reclaiming the Editor</h1>
+        <div class="post__tags">
+          <span class="tag tag--mistake">Mistake</span>
+          <span class="tag tag--decision">Decision</span>
+        </div>
+      </header>
+
+      <div class="post__body glass-card">
+        <p>
+          Three years at an HR SaaS startup took me from writing features to sitting in product meetings, running technical calls, and leading a team through implementation problems I used to solve myself. On paper, that's progress. Most weeks, it felt like it.
+        </p>
+
+        <div class="post__section">
+          <h2 class="post__section-title"><i class="fas fa-triangle-exclamation"></i> The Mistake</h2>
+          <p>
+            The mistake wasn't taking on more responsibility — it was not noticing what it was quietly costing. I kept telling myself the itch to write code again was just nostalgia, something senior engineers grow out of. So I ignored it, month after month, and back-filled the feeling with "leading" instead of "building."
+          </p>
+          <p>
+            <strong>It took longer than it should have to admit</strong> that the best part of most weeks was the one afternoon I still got to touch a codebase directly — not because management is lesser work, but because it wasn't the work I actually wanted more of.
+          </p>
+        </div>
+
+        <div class="post__section">
+          <h2 class="post__section-title"><i class="fas fa-signs-post"></i> The Decision</h2>
+          <p>
+            Once I named it honestly, the decision was less dramatic than I expected: move back toward backend and full-stack engineering on purpose, instead of treating it as something I'd get to "eventually." Sharpen the technical edge that management had quietly been pulling me away from.
+          </p>
+          <p>
+            That's the actual reason this site exists in its current form — not a portfolio to prove I can manage people, but one built to show I can still <strong>design the system</strong>, <strong>write the code</strong>, and <strong>solve the problem</strong> myself. And to open the door to working with development teams beyond Cambodia, where that's the work on offer.
+          </p>
+        </div>
+
+        <blockquote>
+          The role I was good at and the role I wanted turned out to be two different jobs. Noticing that late is the mistake. Acting on it late is optional.
+        </blockquote>
+      </div>
+
+      <footer class="post__footer">
+        <a href="why-i-started-writing-this-down.html" class="post__nav-link"><i class="fas fa-arrow-left"></i> Prev: Why I Started Writing This Down</a>
+        <a href="vanilla-js-trade-off.html" class="post__nav-link post__nav-link--next">Next: Vanilla JS Over a Framework <i class="fas fa-arrow-right"></i></a>
+      </footer>
+    </div>
+  </article>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="logo-kanji">夢</span>
+        <span>Say<span class="logo-accent">Varady</span></span>
+      </div>
+      <p class="footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract not to chase</p>
+      <p class="footer__copy">&copy; 2026 Say Varady. Crafted with <span class="heart">♥</span> and lots of coffee.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

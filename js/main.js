@@ -160,10 +160,10 @@
     if (!el) return;
     const roles = [
         'Full-Stack Developer',
-        'UI/UX Enthusiast',
-        'Anime Art Lover',
-        'Problem Solver',
-        'Open Source Fan',
+        'Laravel & Vue Craftsman',
+				'Backend-Leaning Engineer',
+				'Curious Problem Solver',
+        'Collaborator Across Borders',
     ];
     let ri = 0, ci = 0, deleting = false;
 
@@ -184,7 +184,7 @@
 /* ── Scroll Reveal ── */
 (function initReveal() {
     const els = document.querySelectorAll(
-        '.about__card, .fact-item, .skills__icons, .skills__bars, .project-card, .contact__info, .contact__form'
+        '.about__card, .fact-item, .skills__icons, .skills__bars, .project-card, .writing-card, .contact__info, .contact__form'
     );
     els.forEach(el => el.classList.add('reveal'));
 
@@ -292,4 +292,30 @@ document.addEventListener('click', e => {
             { transform: `translate(calc(-50% + ${Math.cos(angle) * dist}px), calc(-50% + ${Math.sin(angle) * dist}px)) scale(0)`, opacity: 0 }
         ], { duration: 500, easing: 'ease-out', fill: 'forwards' }).onfinish = () => spark.remove();
     }
+});
+
+/* --- Render experience */
+document.addEventListener('DOMContentLoaded', () => {
+	const experience = document.getElementById('experience');
+	const experienceYear = document.getElementById('experience-year');
+	const experienceText = document.getElementById('experience-text');
+
+	let date = new Date();
+	let years = date.getFullYear() - 2023;
+	let months = date.getMonth() - 7;
+
+	if (experience) {
+		
+		if (months < 0) {
+			years--;
+			months += 12;
+		}
+    experience.textContent = `${years} years ${months} months`;
+	}
+	if (experienceYear) {
+		experienceYear.textContent = `${years}`;
+	}
+	if (experienceText) {
+		experienceText.textContent = `Years Professional Experience`;
+	}
 });
