@@ -184,7 +184,7 @@
 /* ── Scroll Reveal ── */
 (function initReveal() {
     const els = document.querySelectorAll(
-        '.about__card, .fact-item, .skills__icons, .skills__bars, .project-card, .writing-card, .contact__info, .contact__form'
+        '.about__card, .fact-item, .skills__icons, .skills__bars, .project-card, .writing-card, .writing-cta, .contact__info, .contact__form'
     );
     els.forEach(el => el.classList.add('reveal'));
 
