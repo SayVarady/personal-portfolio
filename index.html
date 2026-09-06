@@ -5,504 +5,247 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Personal portfolio of a developer with a passion for building beautiful digital experiences." />
-  <title>Say Varady — Developer Portfolio</title>
+    content="Say Varady — software engineer in Phnom Penh, Cambodia. Laravel and Vue by trade, moving deeper into backend and full-stack systems work." />
+  <title>Say Varady — Software Engineer</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- Custom cursor -->
-  <div id="cursor" class="cursor"></div>
-  <div id="cursor-trail" class="cursor-trail"></div>
-
-  <!-- Floating sakura canvas -->
-  <canvas id="sakura-canvas"></canvas>
-
-  <!-- ───────── NAVBAR ───────── -->
-  <nav id="navbar" class="navbar">
-    <a href="#hero" class="navbar__logo">
-      <span class="logo-kanji">夢</span>
-      <span class="logo-text">Say<span class="logo-accent">Varady</span></span>
-    </a>
-    <button id="menu-toggle" class="navbar__hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul id="nav-links" class="navbar__links">
-      <li><a href="#hero" class="nav-link" data-section="hero">Home</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-      <li><a href="#writing"  class="nav-link" data-section="writing">Writing</a></li>
-      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <a href="#top" class="logo">S<span>V</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#focus" class="nav-link" data-section="focus">Focus</a></li>
+        <!--<li><a href="#work" class="nav-link" data-section="work">Work</a></li>-->
+        <li><a href="#writing" class="nav-link" data-section="writing">Writing</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
   <!-- ───────── HERO ───────── -->
-  <section id="hero" class="hero">
-    <div class="hero__bg-grid"></div>
-    <div class="hero__content">
-      <div class="hero__text">
-        <p class="hero__greeting"><span class="kanji-accent">こんにちは</span> — Hello, World!</p>
-        <h1 class="hero__name">Say <span class="gradient-text">Varady</span></h1>
-        <p class="hero__role">
-          I'm a <span id="typed-text" class="typed-accent">Full-Stack Developer</span><span
-            class="cursor-blink">|</span>
-        </p>
-        <p class="hero__bio">
-          Crafting beautiful, performant web experiences — one line of code at a time.
-        </p>
-        <div class="hero__cta">
-          <a href="#projects" class="btn btn--primary">View My Work</a>
-          <a href="#contact" class="btn btn--outline">Get In Touch</a>
-        </div>
-        <div class="hero__socials">
-          <a href="https://github.com/sayvarady" target="_blank" rel="noopener" aria-label="GitHub"><i
-              class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/sayvarady" target="_blank" rel="noopener" aria-label="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="hero__image-wrap">
-        <div class="hero__image-ring"></div>
-        <div class="hero__image-ring hero__image-ring--2"></div>
-        <img src="assets/hero.png" alt="Anime developer hero illustration" class="hero__image" />
-      </div>
-    </div>
-    <div class="hero__scroll-hint">
-      <span>Scroll Down</span>
-      <div class="scroll-arrow">
-        <i class="fas fa-chevron-down"></i>
+  <section class="hero">
+    <div class="wrap wrap--wide">
+      <p class="hero__kicker">Phnom Penh, Cambodia</p>
+      <h1 class="hero__name">Say Varady</h1>
+      <p class="hero__role">Software Engineer</p>
+      <p class="hero__bio">
+        I build backend and full-stack systems — mostly Laravel and Vue. Three years shipping a production HR
+        platform, now going deeper on the parts of engineering I like most: designing the system, not just
+        delegating it.
+      </p>
+      <div class="hero__links">
+        <!--<a href="#work">See my work</a>-->
+        <a href="#contact">Get in touch</a>
+        <span class="hero__icons">
+          <a href="https://github.com/SayVarady" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/varady-say-03b691295/" target="_blank" rel="noopener" class="icon-link"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path
+                d="M14.82 0H1.18C.53 0 0 .53 0 1.18v13.64C0 15.47.53 16 1.18 16h13.64c.65 0 1.18-.53 1.18-1.18V1.18C16 .53 15.47 0 14.82 0ZM4.75 13.63H2.4V6.02h2.35v7.61ZM3.58 5.01a1.36 1.36 0 1 1 0-2.72 1.36 1.36 0 0 1 0 2.72Zm10.05 8.62h-2.35V9.93c0-.87-.02-1.99-1.21-1.99-1.22 0-1.4.95-1.4 1.93v3.76H6.32V6.02h2.26v1.04h.03c.31-.6 1.08-1.23 2.23-1.23 2.38 0 2.82 1.57 2.82 3.6v4.2Z" />
+            </svg>
+          </a>
+          <a href="mailto:varady.work@gmail.com" class="icon-link" aria-label="Email">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path
+                d="M1.5 3h13a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm.35 1L8 8.5 14.15 4H1.85ZM14.5 5.2l-6.16 4.4a.6.6 0 0 1-.68 0L1.5 5.2V12h13V5.2Z" />
+            </svg>
+          </a>
+        </span>
       </div>
     </div>
   </section>
 
   <!-- ───────── ABOUT ───────── -->
   <section id="about" class="section about">
-    <div class="section__inner">
-      <div class="section__header">
-        <span class="section__kanji">私について</span>
-        <h2 class="section__title">About Me</h2>
-        <div class="section__divider"></div>
-      </div>
-      <div class="about__grid">
-        <div class="about__card glass-card">
-          <div class="about__avatar-wrap">
-            <div class="about__avatar-ring"></div>
-            <div class="about__avatar">
-              <i class="fas fa-code"></i>
-            </div>
-          </div>
-          <h3>Who Am I?</h3>
-          <p>
-            I'm <strong>Say Varady</strong>, a developer based in Phnom Penh, Cambodia. I spent the last <span id="experience">3 years</span> as a Software Engineer at an HR SaaS startup — sitting in <strong>product meetings</strong>, <strong>technical calls</strong>, and <strong>leading a team</strong> through complex implementation problems. Somewhere in that process I realized what I actually love is being hands-on: <strong>writing the code</strong>, <strong>designing the system</strong>, <strong>solving the problem</strong> myself — not just delegating it.
-            
-            So I'm doing something about it. I'm moving deeper into <strong>backend and full-stack engineering</strong>, <strong>sharpening the technical edge</strong> that management pulled me away from, and building toward working with development teams beyond Cambodia.
-          </p>
-        </div>
-        <div class="about__card glass-card">
-          <div class="about__avatar-wrap">
-            <div class="about__avatar-ring"></div>
-            <div class="about__avatar">
-              <i class="fas fa-palette"></i>
-            </div>
-          </div>
-          <h3>What I Do</h3>
-          <p>
-          	I build full-stack web applications with <strong>Laravel</strong> and <strong>Vue</strong>, with 3 years of production experience shipping real features for an HR SaaS product used by real companies. I care about how systems are structured underneath — not just that they work, but why they're built the way they are.
-          </p>
-        </div>
-        <div class="about__card glass-card">
-          <div class="about__avatar-wrap">
-            <div class="about__avatar-ring"></div>
-            <div class="about__avatar">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-          <h3>What I'm Working Toward</h3>
-          <p>
-          I'm building this site as a record of that shift: the projects I'm building, the technical decisions I make and why, and the lessons from moving between management and engineering. If you're a developer or team working on interesting problems — especially across borders — I'd love to connect.
-          </p>
-        </div>
-      </div>
-      <div class="about__facts">
-        <div class="fact-item">
-          <span class="fact-number" id="experience-year">2+</span>
-          <span class="fact-label" id="experience-text">Years Experience</span>
-        </div>
-        <div class="fact-divider"></div>
-        <div class="fact-item">
-          <span class="fact-number">1</span>
-          <span class="fact-label">Production SaaS Product</span>
-        </div>
-        <div class="fact-divider"></div>
-        <div class="fact-item">
-          <span class="fact-number">∞</span>
-          <span class="fact-label">Lines of Code</span>
-        </div>
-        <div class="fact-divider"></div>
-        <div class="fact-item">
-          <span class="fact-number">☕</span>
-          <span class="fact-label">Cups of Coffee</span>
-        </div>
+    <div class="wrap">
+      <span class="eyebrow">II — About</span>
+      <h2 class="section__title">Who I am</h2>
+      <p>
+        I'm <strong>Say Varady</strong>, a developer based in Phnom Penh, Cambodia. I spent
+        <span id="experience">the last few years</span> as a Software Engineer at an HR SaaS
+        startup — sitting in product meetings, running technical calls, and leading a team through
+        implementation problems I used to solve myself. Somewhere in that process I noticed what I
+        actually wanted more of was being hands-on again: writing the code, designing the system,
+        solving the problem myself instead of delegating it.
+      </p>
+      <p>
+        So I've been moving deeper into <strong>backend and full-stack engineering</strong>, sharpening
+        the technical edge that management pulled me away from, and building toward working with
+        development teams beyond Cambodia.
+      </p>
+      <div class="about__now">
+        <h3>Right now</h3>
+        <p>
+          Building this site as a record of that shift — the decisions I make and why, and the
+          occasional lesson from moving between management and engineering.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ───────── SKILLS ───────── -->
-    <section id="skills" class="section skills">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__kanji">スキル</span>
-          <h2 class="section__title">Skills & Tech</h2>
-          <div class="section__divider"></div>
+  <!-- ───────── FOCUS ───────── -->
+  <section id="focus" class="section focus">
+    <div class="wrap">
+      <span class="eyebrow">III — Focus</span>
+      <h2 class="section__title">What I work with</h2>
+      <dl class="stack-list">
+        <div class="stack-row">
+          <dt>Core stack</dt>
+          <dd>Laravel, Vue.js (Options &amp; Composition API), PHP, MySQL, REST API design.
+            <span class="muted">Three years in production on an HR SaaS platform.</span>
+          </dd>
         </div>
-        <div class="skills__grid">
-          <!-- Tech Icons -->
-          <div class="skills__icons glass-card">
-            <h3 class="skills__subtitle">Technologies</h3>
-            <div class="tech-icons">
-              <div class="tech-icon" data-label="HTML5">
-                <i class="fab fa-html5" style="color:#e34c26"></i>
-                <span>HTML5</span>
-              </div>
-              <div class="tech-icon" data-label="CSS3">
-                <i class="fab fa-css3-alt" style="color:#264de4"></i>
-                <span>CSS3</span>
-              </div>
-              <div class="tech-icon" data-label="JavaScript">
-                <i class="fab fa-js-square" style="color:#f7df1e"></i>
-                <span>JavaScript</span>
-              </div>
-              <div class="tech-icon" data-label="Vuejs">
-                <i class="fab fa-vuejs" style="color: #63e6be;"></i>
-                <span>Vue</span>
-              </div>
-              <div class="tech-icon" data-label="MySQL">
-                <i class="fas fa-database" style="color:#4479a1"></i>
-                <span>MySQL</span>
-              </div>
-              <div class="tech-icon" data-label="PHP">
-                <i class="fab fa-php" style="color:#5176ef"></i>
-                <span>PHP</span>
-              </div>
-              <div class="tech-icon" data-label="Laravel">
-                <i class="fab fa-laravel" style="color:#ff2d20"></i>
-                <span>Laravel</span>
-              </div>
-              <div class="tech-icon" data-label="Docker">
-                <i class="fab fa-docker" style="color:#2496ed"></i>
-                <span>Docker</span>
-              </div>
-              <div class="tech-icon" data-label="Git">
-                <i class="fab fa-git-alt" style="color:#f05032"></i>
-                <span>Git</span>
-              </div>
-            </div>
-          </div>
-          <!-- Skill Groups -->
-          <div class="skills__bars glass-card">
-            <h3 class="skills__subtitle">Experience Breakdown</h3>
-            <div class="skill-group-list">
-  
-              <div class="skill-group">
-                <div class="skill-group__label">
-                  <i class="fas fa-check-circle skill-group__icon skill-group__icon--core"></i>
-                  <span>Core Stack — Production Experience</span>
-                </div>
-                <p class="skill-group__desc">
-                  3 years building and maintaining a production HR SaaS platform.
-                </p>
-                <div class="skill-group__tags">
-                  <span class="tag">Laravel</span>
-                  <span class="tag">Vue.js (Option API & Composition API)</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span> <br>
-                  <span class="tag">REST API Design</span>
-                </div>
-              </div>
-  
-              <div class="skill-group">
-                <div class="skill-group__label">
-                  <i class="fas fa-laptop-code skill-group__icon skill-group__icon--comfortable"></i>
-                  <span>Also Comfortable With</span>
-                </div>
-                <div class="skill-group__tags">
-                  <span class="tag">JavaScript (ES6+)</span>
-                  <span class="tag">HTML5 / CSS3</span>
-                  <span class="tag">Git &amp; GitHub Workflows</span>
-                </div>
-              </div>
-  
-              <div class="skill-group">
-                <div class="skill-group__label">
-                  <i class="fas fa-arrow-trend-up skill-group__icon skill-group__icon--growing"></i>
-                  <span>Currently Deepening</span>
-                </div>
-                <p class="skill-group__desc">
-                  Actively building toward stronger backend architecture and deployment skills.
-                </p>
-                <div class="skill-group__tags">
-                  <span class="tag">Docker</span>
-                  <span class="tag">CI/CD (GitHub Actions)</span>
-                  <span class="tag">Automated Testing (Pest)</span> <br>
-                  <span class="tag">System Architecture & Design</span>
-                </div>
-              </div>
-  
-              <div class="skill-group">
-                <div class="skill-group__label">
-                  <i class="fas fa-compass skill-group__icon skill-group__icon--exploring"></i>
-                  <span>Exploring</span>
-                </div>
-                <div class="skill-group__tags">
-                  <span class="tag tag--muted">Node.js</span>
-                  <span class="tag tag--muted">Python</span>
-                </div>
-              </div>
-  
-            </div>
-          </div>
+        <div class="stack-row">
+          <dt>Also comfortable with</dt>
+          <dd>JavaScript (ES6+), HTML5 / CSS3, Git &amp; GitHub workflows.</dd>
         </div>
-      </div>
-    </section>
-
-  <!-- ───────── PROJECTS ───────── -->
-  <section id="projects" class="section projects">
-    <div class="section__inner">
-      <div class="section__header">
-        <span class="section__kanji">プロジェクト</span>
-        <h2 class="section__title">Projects</h2>
-        <div class="section__divider"></div>
-      </div>
-      <div class="projects__grid">
-
-        <article class="project-card glass-card">
-          <div class="project-card__badge">Featured</div>
-          <div class="project-card__icon"><i class="fas fa-link"></i></div>
-          <h3 class="project-card__title">URL Shortener</h3>
-          <p class="project-card__desc">A full-stack URL shortening application built with Laravel, Vue.js, and MySQL.
-            Features custom aliases, analytics, and QR code generation.</p>
-          <div class="project-card__tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">Vue.js</span>
-            <span class="tag">MySQL</span>
-          </div>
-          <div class="project-card__links">
-            <a href="#" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Code</a>
-            <a href="#" target="_blank" rel="noopener" class="project-link project-link--live"><i
-                class="fas fa-external-link-alt"></i> Live</a>
-          </div>
-        </article>
-
-        <article class="project-card glass-card">
-          <div class="project-card__icon"><i class="fas fa-globe"></i></div>
-          <h3 class="project-card__title">Portfolio Website</h3>
-          <p class="project-card__desc">This very site — a personal portfolio built with pure HTML, CSS, and Vanilla
-            JavaScript. Hosted on GitHub Pages.</p>
-          <div class="project-card__tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <div class="project-card__links">
-            <a href="https://github.com/sayvarady/personal-portfolio" target="_blank" disabled rel="noopener"
-              class="project-link"><i class="fab fa-github"></i> Code</a>
-            <a href="#" target="_blank" rel="noopener" class="project-link project-link--live" disabled><i
-                class="fas fa-external-link-alt"></i> Live</a>
-          </div>
-        </article>
-
-        <article class="project-card glass-card">
-          <div class="project-card__icon"><i class="fas fa-robot"></i></div>
-          <h3 class="project-card__title">Coming Soon</h3>
-          <p class="project-card__desc">My next project is in the works — something exciting with AI and modern web
-            tech. Stay tuned for the reveal!</p>
-          <div class="project-card__tags">
-            <span class="tag">AI</span>
-            <span class="tag">Web</span>
-            <span class="tag">TBD</span>
-          </div>
-          <div class="project-card__links">
-            <a href="#contact" class="project-link"><i class="fas fa-bell"></i> Notify Me</a>
-          </div>
-        </article>
-
-      </div>
+        <div class="stack-row">
+          <dt>Currently deepening</dt>
+          <dd>Docker, CI/CD with GitHub Actions, automated testing with Pest, and system architecture.</dd>
+        </div>
+        <div class="stack-row">
+          <dt>Exploring</dt>
+          <dd class="muted">Node.js, Python.</dd>
+        </div>
+      </dl>
     </div>
   </section>
+
+  <!-- ───────── WORK ───────── -->
+  <!--<section id="work" class="section work">
+    <div class="wrap">
+      <span class="eyebrow">IV — Selected Work</span>
+      <h2 class="section__title">Work</h2>
+      <ul class="work-list">
+        <li class="work-item">
+          <div class="work-item__head">
+            <h3>URL Shortener</h3>
+          </div>
+          <p class="work-item__desc">
+            A full-stack URL shortening app with custom aliases, click analytics, and QR code generation.
+          </p>
+          <p class="work-item__stack">Laravel · Vue.js · MySQL</p>
+        </li>
+        <li class="work-item">
+          <div class="work-item__head">
+            <h3>This Site</h3>
+          </div>
+          <p class="work-item__desc">
+            Personal portfolio and writing space. Static HTML, CSS, and vanilla JavaScript — no build step, no
+            framework.
+          </p>
+          <p class="work-item__stack">HTML · CSS · JavaScript</p>
+          <a href="https://github.com/SayVarady/personal-portfolio" target="_blank" rel="noopener"
+            class="work-item__link">Source →</a>
+        </li>
+      </ul>
+      <p class="work-more">More on <a href="https://github.com/SayVarady" target="_blank" rel="noopener">GitHub →</a>
+      </p>
+    </div>
+  </section>-->
 
   <!-- ───────── WRITING ───────── -->
   <section id="writing" class="section writing">
-    <div class="section__inner">
-      <div class="section__header">
-        <span class="section__kanji">日誌</span>
-        <h2 class="section__title">Writing</h2>
-        <div class="section__divider"></div>
-        <p class="section__subtitle">Notes from the process — the ideas, the mistakes, the decisions I'd make again, and the ones I wouldn't.</p>
-      </div>
-      <!--<div class="writing__grid">
+    <div class="wrap">
+      <span class="eyebrow">V — Writing</span>
+      <!--<h2 class="section__title">Notes</h2>
+      <p class="section__lede">The ideas, the mistakes, the decisions I'd make again — and the ones I wouldn't.</p>
 
-        <article class="writing-card glass-card">
-          <span class="writing-card__chapter">一</span>
-          <div class="writing-card__meta">
-            <span>Aug 2026</span>
-            <span class="dot">•</span>
-            <span>4 min read</span>
-          </div>
-          <h3 class="writing-card__title">Why I Started Writing This Down</h3>
-          <p class="writing-card__desc">The portfolio was supposed to just list projects. Then I realized the more interesting record was everything that happened before a project was "done" — so I built a place to keep it.</p>
-          <div class="writing-card__tags">
-            <span class="tag tag--idea">Idea</span>
-            <span class="tag tag--decision">Decision</span>
-          </div>
-          <a href="writing/why-i-started-writing-this-down.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
-        </article>
+      <ul class="writing-list">
+        <li class="writing-item">
+          <a href="writing/why-i-started-writing-this-down.html">
+            <div class="writing-item__meta">
+              <span>Aug 2026</span><span class="dot">·</span><span>4 min read</span>
+            </div>
+            <h3>Why I Started Writing This Down</h3>
+            <p class="writing-item__desc">The portfolio was supposed to just list projects. The more interesting
+              record turned out to be everything that happened before a project was "done."</p>
+          </a>
+        </li>
+        <li class="writing-item">
+          <a href="writing/leaving-the-meeting-room.html">
+            <div class="writing-item__meta">
+              <span>Jun 2026</span><span class="dot">·</span><span>6 min read</span>
+            </div>
+            <h3>Leaving the Meeting Room, Reclaiming the Editor</h3>
+            <p class="writing-item__desc">Three years into managing people and product calls, I noticed I was
+              happiest the one afternoon a week I still got to touch a codebase.</p>
+          </a>
+        </li>
+        <li class="writing-item">
+          <a href="writing/vanilla-js-trade-off.html">
+            <div class="writing-item__meta">
+              <span>Apr 2026</span><span class="dot">·</span><span>5 min read</span>
+            </div>
+            <h3>Vanilla JS Over a Framework: A Trade-off I Keep Revisiting</h3>
+            <p class="writing-item__desc">I build production apps in Vue every day. So why is this site plain HTML,
+              CSS, and vanilla JavaScript?</p>
+          </a>
+        </li>
+      </ul>-->
 
-        <article class="writing-card glass-card">
-          <span class="writing-card__chapter">二</span>
-          <div class="writing-card__meta">
-            <span>Jun 2026</span>
-            <span class="dot">•</span>
-            <span>6 min read</span>
-          </div>
-          <h3 class="writing-card__title">Leaving the Meeting Room, Reclaiming the Editor</h3>
-          <p class="writing-card__desc">Three years into managing people and product calls, I noticed I was happiest the one hour a week I still got to write code. Here's the mistake I almost made ignoring that.</p>
-          <div class="writing-card__tags">
-            <span class="tag tag--mistake">Mistake</span>
-            <span class="tag tag--decision">Decision</span>
-          </div>
-          <a href="writing/leaving-the-meeting-room.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
-        </article>
-
-        <article class="writing-card glass-card">
-          <span class="writing-card__chapter">三</span>
-          <div class="writing-card__meta">
-            <span>Apr 2026</span>
-            <span class="dot">•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="writing-card__title">Vanilla JS Over a Framework: A Trade-off I Keep Revisiting</h3>
-          <p class="writing-card__desc">I build production apps in Vue every day. So why is this site plain HTML, CSS, and vanilla JavaScript? A look at the trade-off, and whether I'd still make the same call.</p>
-          <div class="writing-card__tags">
-            <span class="tag tag--decision">Decision</span>
-            <span class="tag tag--tradeoff">Trade-off</span>
-          </div>
-          <a href="writing/vanilla-js-trade-off.html" class="writing-card__link">Read Entry <i class="fas fa-arrow-right"></i></a>
-        </article>
-
-      </div>-->
-
-      <a href="https://hobby-sable-seven.vercel.app/" target="_blank" rel="noopener" class="writing-cta glass-card">
-        <div class="writing-cta__text">
-          <span class="writing-cta__eyebrow">Beyond the Journal</span>
-          <h3 class="writing-cta__title">A full technical library, if you want to go deeper</h3>
-          <p class="writing-cta__desc">The entire collection of my knowledge throughout my entire career. What I have learned along the way and what I have built. An eight-series roadmap and still growing. Zero hand-waving. How machines actually find and talk to each other — DNS, TCP/IP, sockets, routing — the floor every other series here stands on, all the way to building things that scale. This is not an advice or best practice, it is just what I have come to understand</p>
-        </div>
-        <span class="writing-cta__arrow"><i class="fas fa-external-link-alt"></i></span>
+      <a href="https://hobby-sable-seven.vercel.app/" target="_blank" rel="noopener" class="writing-more">
+        <span class="writing-more__eyebrow">Beyond the Journal</span>
+        <h3>A full technical library, if you want to go deeper</h3>
+        <p>An ongoing, eight-part write-up of what I've learned building things — starting from how machines
+          actually find and talk to each other, up through systems that scale. No hand-waving, no best-practice
+          listicles — just what I've come to understand.</p>
       </a>
     </div>
   </section>
 
   <!-- ───────── CONTACT ───────── -->
   <section id="contact" class="section contact">
-    <div class="section__inner">
-      <div class="section__header">
-        <span class="section__kanji">我们联系吧。</span>
-        <h2 class="section__title">Get In Touch</h2>
-        <div class="section__divider"></div>
-        <p class="section__subtitle">Have a project in mind? Let's build something great together.</p>
-      </div>
-      <div class="contact__grid">
-        <div class="contact__info glass-card">
-          <h3>Let's Connect</h3>
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-item__icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <span class="contact-item__label">Gmail</span>
-                <a href="mailto:varady.work@gmail.com" class="contact-item__value">varady.work@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item__icon"><i class="fab fa-github"></i></div>
-              <div>
-                <span class="contact-item__label">GitHub</span>
-                <a href="https://github.com/sayvarady" target="_blank" rel="noopener"
-                  class="contact-item__value">github.com/sayvarady</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item__icon"><i class="fab fa-linkedin"></i></div>
-              <div>
-                <span class="contact-item__label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/varady-say-03b691295/" target="_blank" rel="noopener"
-                  class="contact-item__value">linkedin.com/in/sayvarady</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item__icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <span class="contact-item__label">Location</span>
-                <span class="contact-item__value">Phnom Penh, Cambodia 🇰🇭</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <form id="contact-form" class="contact__form glass-card" novalidate>
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Sakura Yamamoto" required />
-            <span class="form-error" id="name-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="sakura@example.com" required />
-            <span class="form-error" id="email-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Let's work together!" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-              required></textarea>
-            <span class="form-error" id="message-error"></span>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <div id="form-success" class="form-success hidden">
-            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+    <div class="wrap">
+      <span class="eyebrow">VI — Contact</span>
+      <h2 class="section__title">Get in touch</h2>
+      <p class="section__lede">Working with a team on interesting problems, especially across borders? I'd like to
+        hear about it.</p>
+
+      <ul class="contact-list">
+        <li>
+          <span class="label">Email</span>
+          <a href="mailto:varady.work@gmail.com" class="value">varady.work@gmail.com</a>
+        </li>
+        <li>
+          <span class="label">GitHub</span>
+          <a href="https://github.com/SayVarady" target="_blank" rel="noopener" class="value">github.com/SayVarady</a>
+        </li>
+        <li>
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/varady-say-03b691295/" target="_blank" rel="noopener"
+            class="value">linkedin.com/in/varady-say</a>
+        </li>
+        <li>
+          <span class="label">Location</span>
+          <span class="value">Phnom Penh, Cambodia</span>
+        </li>
+      </ul>
+    </div>																												 </section>
 
   <!-- ───────── FOOTER ───────── -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="logo-kanji">夢</span>
-        <span>Say<span class="logo-accent">Varady</span></span>
-      </div>
-      <p class="footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract not to chase</p>
-      <p class="footer__copy">&copy; 2026 Say Varady. Crafted with <span class="heart">♥</span> and lots of coffee.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="site-footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract, not to
+        chase.</p>
+      <p class="site-footer__copy">&copy; 2026 Say Varady.</p>
     </div>
   </footer>
 

@@ -3,112 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Why this portfolio is plain HTML, CSS, and vanilla JavaScript instead of Vue — and the trade-off behind that call." />
+  <meta name="description" content="I build production apps in Vue every day. So why is this site plain HTML, CSS, and vanilla JavaScript — and why did I strip it back even further?" />
   <title>Vanilla JS Over a Framework: A Trade-off I Keep Revisiting — Say Varady</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
-  <!-- Custom cursor -->
-  <div id="cursor" class="cursor"></div>
-  <div id="cursor-trail" class="cursor-trail"></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html#top" class="logo">S<span>V</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#focus" class="nav-link">Focus</a></li>
+        <li><a href="../index.html#work" class="nav-link">Work</a></li>
+        <li><a href="../index.html#writing" class="nav-link active">Writing</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <!-- Floating sakura canvas -->
-  <canvas id="sakura-canvas"></canvas>
+  <article class="post">
+    <div class="wrap">
+      <a href="../index.html#writing" class="post__back">&larr; Back to Writing</a>
 
-  <!-- ───────── NAVBAR ───────── -->
-  <nav id="navbar" class="navbar">
-    <a href="../index.html#hero" class="navbar__logo">
-      <span class="logo-kanji">夢</span>
-      <span class="logo-text">Say<span class="logo-accent">Varady</span></span>
-    </a>
-    <button id="menu-toggle" class="navbar__hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul id="nav-links" class="navbar__links">
-      <li><a href="../index.html#hero"     class="nav-link">Home</a></li>
-      <li><a href="../index.html#about"    class="nav-link">About</a></li>
-      <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
-      <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
-      <li><a href="../index.html#writing"  class="nav-link active">Writing</a></li>
-      <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ───────── POST ───────── -->
-  <article class="section post">
-    <div class="section__inner post__inner">
-      <a href="../index.html#writing" class="post__back"><i class="fas fa-arrow-left"></i> Back to Writing</a>
-
-      <header class="post__header">
-        <span class="post__chapter">三</span>
+      <header>
         <div class="post__meta">
-          <span>Apr 2026</span>
-          <span class="dot">•</span>
+          <span>Sep 2026</span>
+          <span class="dot">·</span>
           <span>5 min read</span>
         </div>
         <h1 class="post__title">Vanilla JS Over a Framework: A Trade-off I Keep Revisiting</h1>
         <div class="post__tags">
-          <span class="tag tag--decision">Decision</span>
-          <span class="tag tag--tradeoff">Trade-off</span>
+          <span class="tag">Decision</span>
+          <span class="tag">Trade-off</span>
         </div>
       </header>
 
-      <div class="post__body glass-card">
+      <div class="post__body">
         <p>
           I write Vue every day at work. Components, reactivity, the whole ecosystem — it's second nature at this point. So the obvious choice for a personal portfolio was Vue too. I didn't do that, and I still go back and forth on whether it was right.
         </p>
 
         <div class="post__section">
-          <h2 class="post__section-title"><i class="fas fa-signs-post"></i> The Decision</h2>
+          <h2 class="post__section-title">The Decision</h2>
           <p>
-            This site is plain HTML, CSS, and vanilla JavaScript — no build step, no framework, no dependencies beyond a font and an icon CDN. The custom cursor, the sakura petal canvas, the scroll-reveal animations, the typed-text hero, the skill bars, the contact form validation — all hand-written DOM code in <code>main.js</code>.
-          </p>
-          <p>
-            The reasoning: a portfolio's job is to load instantly, deploy anywhere (GitHub Pages, no CI needed), and stay readable to anyone who opens the source — including non-Vue developers evaluating whether to hire me. A build pipeline for a handful of static sections felt like solving a problem I didn't have.
+            This site is plain HTML, CSS, and vanilla JavaScript — no build step, no framework, no dependencies beyond a Google font. The reasoning: a portfolio's job is to load instantly, deploy anywhere without a CI pipeline, and stay readable to anyone who opens the source — including non-Vue developers evaluating whether to hire me. A build pipeline for a handful of static sections felt like solving a problem I didn't have.
           </p>
         </div>
 
         <div class="post__section">
-          <h2 class="post__section-title"><i class="fas fa-scale-balanced"></i> The Trade-off</h2>
+          <h2 class="post__section-title">The Rebuild</h2>
           <p>
-            The cost showed up almost immediately. Things Vue gives me for free — reactive state, component boundaries, scoped styles — I rebuilt by hand with <code>querySelectorAll</code>, manual class toggling, and a dozen small IIFEs to keep globals from colliding. The active-nav-link highlighting alone is an <code>IntersectionObserver</code> I'd get from a router in about one line of Vue.
+            The first version leaned into that freedom in the wrong direction — a custom cursor, a canvas full of drifting sakura petals, a typed-text role cycler, animated skill bars, glass-card panels, a contact form that faked a "message sent" state. None of it was hard to build by hand, which was the problem. It was easy to keep adding, and every addition made the site read less like mine and more like a template built to impress a screenshot.
           </p>
           <p>
-            It also doesn't scale. Three sections and a contact form is comfortable in vanilla JS. If this site grows into something with real state — saved drafts, a CMS-backed writing index, anything stateful across pages — I'll hit the point where hand-rolled DOM code costs more than the framework it was avoiding.
+            So I stripped it back to a single typographic column: one accent color, hairline rules instead of cards, no animation that isn't load-bearing. What's left is closer to what I actually wanted to say — <strong>here's who I am, here's what I've built, here's how to reach me</strong> — without the effects doing the talking for me.
           </p>
         </div>
 
-        <p>
-          For where this site is today, I'd make the same call again. But I'm not attached to it — the day the vanilla approach starts fighting me instead of staying out of the way, that's the trigger to rebuild it in Vue, not a reason to keep pretending the trade-off doesn't exist.
-        </p>
+        <div class="post__section">
+          <h2 class="post__section-title">The Trade-off</h2>
+          <p>
+            Vanilla JS still costs what it always cost: no reactive state, no component boundaries, a handful of small IIFEs in <code>main.js</code> instead of a framework doing it for me. That's fine at this size — a nav toggle, an active-link highlight, one honest counter for years of experience. If this site ever grows into something with real state — a CMS-backed writing index, saved drafts, anything stateful across pages — that's the point I'd reach for Vue instead of pretending the trade-off doesn't exist.
+          </p>
+        </div>
+
+        <blockquote>
+          Restraint isn't the absence of effort. Cutting the cursor trail took longer than building it did.
+        </blockquote>
       </div>
 
       <footer class="post__footer">
-        <a href="leaving-the-meeting-room.html" class="post__nav-link"><i class="fas fa-arrow-left"></i> Prev: Leaving the Meeting Room</a>
-        <a href="../index.html#writing" class="post__nav-link post__nav-link--next">All Entries</a>
+        <a href="leaving-the-meeting-room.html" class="post__nav-link">&larr; Prev: Leaving the Meeting Room</a>
+        <a href="../index.html#writing" class="post__nav-link">All Entries</a>
       </footer>
     </div>
   </article>
 
-  <!-- ───────── FOOTER ───────── -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <span class="logo-kanji">夢</span>
-        <span>Say<span class="logo-accent">Varady</span></span>
-      </div>
-      <p class="footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract not to chase</p>
-      <p class="footer__copy">&copy; 2026 Say Varady. Crafted with <span class="heart">♥</span> and lots of coffee.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="site-footer__quote">「我专注于提升自我价值，是为了吸引而非追逐。」— I focus on building my value to attract, not to chase.</p>
+      <p class="site-footer__copy">&copy; 2026 Say Varady.</p>
     </div>
   </footer>
 
